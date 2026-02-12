@@ -110,9 +110,25 @@ function renderProjects(filter = "All") {
 
     const title = document.createElement("h3");
     title.textContent = project.title;
+    card.appendChild(title);
+
+    if (project.role) {
+      const role = document.createElement("p");
+      role.className = "project-role";
+      role.textContent = project.role;
+      card.appendChild(role);
+    }
 
     const summary = document.createElement("p");
     summary.textContent = project.summary;
+    card.appendChild(summary);
+
+    if (project.keyFocus) {
+      const focus = document.createElement("p");
+      focus.className = "project-focus";
+      focus.innerHTML = `<span class="project-focus-label">Key Focus:</span> ${project.keyFocus}`;
+      card.appendChild(focus);
+    }
 
     const tags = document.createElement("div");
     tags.className = "tags";
@@ -128,8 +144,6 @@ function renderProjects(filter = "All") {
     addProjectLink(links, "Live", project.liveUrl);
     addProjectLink(links, "Code", project.repoUrl);
 
-    card.appendChild(title);
-    card.appendChild(summary);
     card.appendChild(tags);
     card.appendChild(links);
     projectGrid.appendChild(card);

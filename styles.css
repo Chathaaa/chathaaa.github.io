@@ -211,7 +211,7 @@ h2 {
 .project-card h3 {
   font-size: 1.04rem;
   line-height: 1.25;
-  min-height: 2.5em;
+  min-height: 3.75em;
   text-wrap: balance;
 }
 
@@ -219,6 +219,26 @@ h2 {
   color: #374151;
   margin: 0;
   font-size: 0.95rem;
+}
+
+.project-role {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: -0.12rem;
+}
+
+.project-focus {
+  color: #1f2937;
+  font-size: 0.86rem;
+  background: #f0fdfa;
+  border-left: 3px solid #14b8a6;
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+}
+
+.project-focus-label {
+  font-weight: 700;
 }
 
 .tags {
