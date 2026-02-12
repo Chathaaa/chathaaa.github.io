@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title id="meta-title">Gurshawn Chatha | Frontend Engineer</title>
+  <meta id="meta-description" name="description" content="Frontend engineer portfolio featuring interactive web apps, real-time UI, and production-ready frontend projects." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta id="meta-og-title" property="og:title" content="Gurshawn Chatha | Frontend Engineer" />
+  <meta id="meta-og-description" property="og:description" content="Frontend engineer portfolio featuring interactive web apps, real-time UI, and production-ready frontend projects." />
+  <meta id="meta-og-url" property="og:url" content="" />
+  <meta id="meta-og-image" property="og:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta id="meta-twitter-title" name="twitter:title" content="Gurshawn Chatha | Frontend Engineer" />
+  <meta id="meta-twitter-description" name="twitter:description" content="Frontend engineer portfolio featuring interactive web apps, real-time UI, and production-ready frontend projects." />
+  <meta id="meta-twitter-image" name="twitter:image" content="" />
+  <link rel="canonical" id="meta-canonical" href="" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <header class="site-header">
+    <a class="logo" href="#top" id="logo-text">Gurshawn Chatha</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow" id="hero-eyebrow">Frontend Engineer</p>
+      <h1 id="hero-title">Frontend Engineer building interactive, production web experiences</h1>
+      <p class="hero-copy" id="hero-copy">
+        I build interactive, user-focused web products with a strong emphasis on real-time experiences and production reliability.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn ghost" href="#contact">Get In Touch</a>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-head">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Projects</h2>
+      </div>
+      <div id="project-filters" class="project-filters" role="group" aria-label="Project filters"></div>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-head">
+        <p class="eyebrow">Background</p>
+        <h2>About Me</h2>
+      </div>
+      <p id="about-copy"></p>
+      <div id="skills" class="skills"></div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-head">
+        <p class="eyebrow">Open To Work</p>
+        <h2 id="contact-headline">Let's build something useful.</h2>
+      </div>
+      <p id="contact-copy">Available for freelance and full-time opportunities.</p>
+      <a class="btn primary" id="contact-email-link" href="mailto:shawnchatha@gmail.com">shawnchatha@gmail.com</a>
+      <div id="social-links" class="social-links" aria-label="Social links"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> <span id="footer-name">Gurshawn Chatha</span>. All rights reserved.</small>
+  </footer>
+
+  <script src="site-data.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
