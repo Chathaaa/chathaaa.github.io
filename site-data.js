@@ -44,8 +44,8 @@ window.portfolioData = {
   seo: {
     siteTitle: "Gurshawn Chatha | Fullstack JavaScript Developer",
     description: "Fullstack JavaScript developer building API-driven web applications and real-time systems with React, Node.js, WebSockets, OAuth, and PostgreSQL.",
-    siteUrl: "",
-    previewImage: ""
+    siteUrl: "https://chathaaa.github.io/",
+    previewImage: "https://chathaaa.github.io/preview-card.png"
   },
   projects: [
     {
