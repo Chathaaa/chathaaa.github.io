@@ -1,54 +1,82 @@
 window.portfolioData = {
   person: {
     name: "Gurshawn Chatha",
-    roleLabel: "Frontend Engineer",
-    headline: "Frontend Engineer specializing in real-time UI and production systems",
-    heroCopy: "I build interactive web applications used in production, with a focus on real-time behavior and dependable user interfaces.",
-    about: "I've spent the last three years building and supporting interactive web applications in production. I enjoy working on UI that behaves predictably, handles edge cases well, and scales to real users.",
+    roleLabel: "Fullstack JavaScript Developer",
+    headline: "Fullstack JavaScript developer building and shipping interactive, API-driven web apps and real-time systems",
+    heroCopy: "Frontend-leaning fullstack JavaScript developer focused on responsive UI, real-time sync, API integrations, OAuth, WebSockets, PostgreSQL, and GitHub Apps/webhooks.",
+    about: "Fullstack JavaScript developer building and shipping interactive, API-driven web applications and real-time systems. Skilled in WebSocket architecture, OAuth integrations, and end-to-end product development from frontend UI to backend services. Focused on writing maintainable code and solving complex synchronization and integration challenges.",
     email: "shawnchatha@gmail.com",
     contactHeadline: "Let's build something useful.",
     contactCopy: "Available for frontend and product-focused opportunities.",
-    skills: ["JavaScript", "React", "Real-Time UI", "WebSockets", "REST APIs", "Chrome Extensions", "Production Frontend"],
+    skillGroups: [
+      {
+        group: "Languages",
+        items: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3"]
+      },
+      {
+        group: "Frontend",
+        items: ["React", "Vite", "Responsive UI Design", "State Management"]
+      },
+      {
+        group: "Backend",
+        items: ["Node.js", "Express", "REST APIs", "WebSockets"]
+      },
+      {
+        group: "APIs & Integration",
+        items: ["GitHub API", "GitHub Apps", "Spotify API", "Apple Music (MusicKit)", "OAuth 2.0"]
+      },
+      {
+        group: "Data & Tools",
+        items: ["PostgreSQL", "Docker", "Render", "Vercel", "Git", "GitHub"]
+      }
+    ],
+    likes: [
+      "Real-time UX and synchronization challenges",
+      "API integrations and auth flows",
+      "Product-focused UI with strong usability",
+      "Reliability work and edge-case handling"
+    ],
     socialLinks: [
       { label: "GitHub", url: "https://github.com/chathaaa" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/gurshawnchatha/" }
     ]
   },
   seo: {
-    siteTitle: "Gurshawn Chatha | Frontend Engineer",
-    description: "Frontend engineer portfolio featuring interactive web apps, real-time UI, and production-ready frontend projects.",
+    siteTitle: "Gurshawn Chatha | Fullstack JavaScript Developer",
+    description: "Fullstack JavaScript developer building API-driven web applications and real-time systems with React, Node.js, WebSockets, OAuth, and PostgreSQL.",
     siteUrl: "",
     previewImage: ""
   },
   projects: [
     {
-      title: "Release Sanity - Pre-Deployment Risk & Release Checklist Tool",
+      title: "SyncSong - Cross-Platform Real-Time Music Sync App",
       role: "Full-Stack Developer (Personal Project)",
-      summary: "Web application that analyzes pull requests and generates a structured release checklist to surface potential risks before deployment. Integrates with GitHub to fetch PR data and present actionable summaries to improve developer confidence.",
-      keyFocus: "PR risk analysis workflows and clear release-readiness UX.",
-      category: "Developer Tool / SaaS",
-      tags: ["React", "Node.js", "GitHub API", "Full-Stack", "CI/CD", "Developer Tooling"],
-      liveUrl: "https://release-sanity.vercel.app/",
-      repoUrl: ""
-    },
-    {
-      title: "WatchParty - Live Chat Overlay for Sports Streams",
-      role: "Frontend Engineer (Personal Project)",
-      summary: "Browser extension that adds a real-time chat overlay on live sports streams (e.g., ESPN, Peacock, Prime). Uses WebSockets and componentized UI to sync chat across viewers in real time. Inspired by shared viewing experiences and built with React and JavaScript.",
-      keyFocus: "Real-time state synchronization and resilient extension UI behavior.",
-      category: "Web Application / Browser Extension",
-      tags: ["React", "JavaScript", "WebSockets", "Real-Time UI", "Chrome Extension"],
-      liveUrl: "https://chathaaa.github.io/WatchParty-site",
-      repoUrl: ""
-    },
-    {
-      title: "SyncSong - Cross-Platform Music Sync",
-      role: "Frontend Engineer (Personal Project)",
-      summary: "Web app for listening together in sync via Spotify and Apple Music. Implemented real-time queue and playback sync with state updates across users, focusing on responsive controls and API integration.",
-      keyFocus: "Low-latency playback sync and robust cross-session state updates.",
+      summary: "Listen together across Spotify and Apple Music with a shared queue and real-time playback sync.",
+      highlights: [
+        "Built a real-time music listening app enabling Spotify and Apple Music users to share synchronized playback across platforms.",
+        "Implemented host-authoritative WebSocket architecture for low-latency playback control and queue management.",
+        "Designed an event-based message protocol (PLAY, PAUSE, ADD_TRACK, REORDER) to keep room state consistent.",
+        "Debugged cross-SDK edge cases (auto-pause / auto-skip) and fixed desync issues by refactoring event flow.",
+        "Implemented periodic state reconciliation + host resync to correct playback drift across clients."
+      ],
       category: "Web Application",
-      tags: ["React", "JavaScript", "WebSockets", "REST APIs", "Real-Time UI"],
+      tags: ["JavaScript", "WebSockets", "Node.js", "Vite", "Render", "Vercel", "Spotify API", "Apple Music (MusicKit)", "OAuth"],
       liveUrl: "https://sync-song-opal.vercel.app/",
+      repoUrl: ""
+    },
+    {
+      title: "Release Sanity - GitHub PR Risk Analysis Tool",
+      role: "Full-Stack Developer (Personal Project)",
+      summary: "Auto-generate a PR 'what changed + what might be risky' summary and checklist before merge.",
+      highlights: [
+        "Built a GitHub App that analyzes pull request diffs and generates risk summaries before merge.",
+        "Implemented GitHub App integration, OAuth, and webhook processing for real-time pull request updates.",
+        "Designed heuristic-based analysis logic to detect high-risk changes (auth, database, API contracts).",
+        "Built UI to display concise change summaries and actionable release checklists."
+      ],
+      category: "Developer Tool / SaaS",
+      tags: ["TypeScript", "Node.js", "GitHub Apps", "Webhooks", "PostgreSQL", "Vercel"],
+      liveUrl: "https://release-sanity.vercel.app/",
       repoUrl: ""
     }
   ]

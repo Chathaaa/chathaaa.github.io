@@ -50,12 +50,37 @@ function renderProfile() {
   }
 
   const skillsEl = document.getElementById("skills");
-  if (skillsEl && Array.isArray(person.skills)) {
+  if (skillsEl && Array.isArray(person.skillGroups)) {
     skillsEl.innerHTML = "";
-    person.skills.forEach((skill) => {
-      const chip = document.createElement("span");
-      chip.textContent = skill;
-      skillsEl.appendChild(chip);
+    person.skillGroups.forEach((skillGroup) => {
+      const block = document.createElement("div");
+      block.className = "skill-group";
+
+      const label = document.createElement("h3");
+      label.className = "skill-group-title";
+      label.textContent = skillGroup.group;
+
+      const chips = document.createElement("div");
+      chips.className = "skills";
+      (skillGroup.items || []).forEach((skill) => {
+        const chip = document.createElement("span");
+        chip.textContent = skill;
+        chips.appendChild(chip);
+      });
+
+      block.appendChild(label);
+      block.appendChild(chips);
+      skillsEl.appendChild(block);
+    });
+  }
+
+  const likesEl = document.getElementById("likes-list");
+  if (likesEl && Array.isArray(person.likes)) {
+    likesEl.innerHTML = "";
+    person.likes.forEach((item) => {
+      const bullet = document.createElement("li");
+      bullet.textContent = item;
+      likesEl.appendChild(bullet);
     });
   }
 
@@ -123,10 +148,23 @@ function renderProjects(filter = "All") {
     summary.textContent = project.summary;
     card.appendChild(summary);
 
-    if (project.keyFocus) {
+    if (Array.isArray(project.highlights) && project.highlights.length) {
+      const highlights = document.createElement("ul");
+      highlights.className = "project-highlights";
+      project.highlights.forEach((point) => {
+        const item = document.createElement("li");
+        item.textContent = point;
+        highlights.appendChild(item);
+      });
+      card.appendChild(highlights);
+    } else if (project.keyFocus) {
       const focus = document.createElement("p");
       focus.className = "project-focus";
-      focus.innerHTML = `<span class="project-focus-label">Key Focus:</span> ${project.keyFocus}`;
+      const label = document.createElement("span");
+      label.className = "project-focus-label";
+      label.textContent = "Key Focus:";
+      focus.appendChild(label);
+      focus.append(` ${project.keyFocus}`);
       card.appendChild(focus);
     }
 

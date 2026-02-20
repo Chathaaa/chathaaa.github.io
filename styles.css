@@ -241,6 +241,15 @@ h2 {
   font-weight: 700;
 }
 
+.project-highlights {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #374151;
+  font-size: 0.9rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
 .tags {
   display: flex;
   flex-wrap: nowrap;
@@ -295,12 +304,54 @@ h2 {
   gap: 0.4rem;
 }
 
+.skills-groups {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.skill-group {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #fff;
+}
+
+.skill-group-title {
+  font-size: 0.94rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.skill-group .skills {
+  margin-top: 0.5rem;
+}
+
 .skills span {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.22rem 0.6rem;
   background: #fff;
   font-size: 0.88rem;
+}
+
+.likes-section {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.likes-section h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.likes-list {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  color: #374151;
+  display: grid;
+  gap: 0.25rem;
 }
 
 .social-links {
